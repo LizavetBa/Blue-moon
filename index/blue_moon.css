@@ -162,3 +162,46 @@ margin: 0 auto;
     text-transform: uppercase;
     margin: 0;
 }
+.section_third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .opening_3 {
+    text-align: center;
+    margin-bottom: 70px; 
+  }
+  
+  .coffee_bar {
+    display: flex;
+    flex-wrap: nowrap; 
+    margin-left: 130px;
+    background-color: #fff;
+    padding-top: 35px;
+  }
+  .coffee_bar > div {
+    width: 560px; 
+    height: 270px;  
+    margin-right: 20px; 
+    overflow-x: scroll;
+  }
+  .scroll {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#scrollButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#scrollButton img {
+    width: 64px;
+    height: 64px;
+}
+
