@@ -167,41 +167,132 @@ margin: 0 auto;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-  }
-  
-  .opening_3 {
-    text-align: center;
-    margin-bottom: 70px; 
-  }
-  
-  .coffee_bar {
-    display: flex;
-    flex-wrap: nowrap; 
-    margin-left: 130px;
-    background-color: #fff;
-    padding-top: 35px;
-  }
-  .coffee_bar > div {
-    width: 560px; 
-    height: 270px;  
-    margin-right: 20px; 
-    overflow-x: scroll;
-  }
-  .scroll {
+}
+.opening_3 {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.item_collection {
+    max-width: 80%;
+    position: relative;
+    overflow: hidden;
+  }
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 560px;
+    height: 256px;
+    transition: transform 0.5s ease;
+}
+.item-content {
+    display: flex;
+    flex:0 0 calc(100%/ 3);
+    align-items: center;
 }
 
-#scrollButton {
-    background: none;
-    border: none;
+  .item-coffee {
+    width: 256px;
+    height: 256px;
+    margin-right: 10px;
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+}
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    transform: translateY(-50%);
     cursor: pointer;
-    padding: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -25px;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 10%;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: #ebdcc8;
+  }
+  
+
+
+.carousel-item h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+.carousel-item p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+
 }
 
-#scrollButton img {
-    width: 64px;
-    height: 64px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,32 +1,20 @@
-const coffeeBarContainer = document.querySelector('.coffee_bar');
-const coffeeBarItems = coffeeBarContainer.querySelectorAll('div');
+var carouselWrapper = document.querySelector('.carousel-wrapper');
+var slides = document.querySelectorAll('.carousel-item');
+var slideWidth = slides[0].offsetWidth;
+var slideMargin = parseInt(window.getComputedStyle(slides[0]).marginRight);
 
-const containerWidth = coffeeBarItems.length * 580; // 560px + 20px отступ
-coffeeBarContainer.style.width = containerWidth + 'px';
+var currentSlideIndex = 0;
 
-const scrollContainer = () => {
-  coffeeBarContainer.scrollTo({
-    left: coffeeBarContainer.scrollLeft + 2,
-    behavior: 'smooth'
-  });
-  
-  if (coffeeBarContainer.scrollLeft >= coffeeBarContainer.scrollWidth - coffeeBarContainer.offsetWidth) {
-    coffeeBarContainer.scrollTo({ left: 0, behavior: 'smooth' });
-  }
-};
-const scrollButton = document.getElementById('scrollButton');
+function plusSlides(n) {
+  showSlide(currentSlideIndex + n);
+}
 
-scrollButton.addEventListener('click', () => {
-    coffeeBarContainer.scrollLeft += 200; // Изменяйте значение, чтобы регулировать величину прокрутки
-});
+function showSlide(n) {
+  var maxIndex = slides.length - 1;
+  currentSlideIndex = Math.max(0, Math.min(n, maxIndex));
 
-const scrollInterval = setInterval(scrollContainer, 10);
+  var translateX = -currentSlideIndex * (slideWidth + slideMargin);
+  carouselWrapper.style.transform = 'translateX(' + translateX + 'px)';
+}
 
-coffeeBarContainer.addEventListener('mouseenter', () => {
-  clearInterval(scrollInterval);
-});
-
-coffeeBarContainer.addEventListener('mouseleave', () => {
-  let scrollInterval = setInterval(scrollContainer, 10);
-});
- 
+showSlide(currentSlideIndex);
